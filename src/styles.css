@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap");
+
+body {
+  font-family: "Georama", sans-serif;
+  background-color: yellowgreen;
+}
+
 .App {
-  font-family: sans-serif;
   text-align: center;
 }
