@@ -2,19 +2,17 @@ import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  var [counter, setcounter] = useState(0);
+  var [uservalue, setuservalue] = useState("");
 
-  const username = "rahul";
-  const likeCounter = () => {
-    counter = counter + 1;
-    setcounter(counter);
+  const inputText = (e) => {
+    setuservalue(e.target.value);
   };
 
   return (
     <div className="App">
-      <h1 style={{ color: "blue" }}>Welcome {username}</h1>
-      <button onClick={likeCounter}>Like</button>
-      <h2>Like Counter: {counter}</h2>
+      <h1 style={{ color: "blue" }}>Welcome </h1>
+      <input onChange={inputText} />
+      <h3>You type: {uservalue}</h3>
     </div>
   );
 }
