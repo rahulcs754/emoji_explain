@@ -1,18 +1,20 @@
-import { useState } from "react-dom";
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
+  var [counter, setcounter] = useState(0);
+
   const username = "rahul";
-  var counter = 0;
   const likeCounter = () => {
     counter = counter + 1;
-    console.log(counter);
+    setcounter(counter);
   };
 
   return (
     <div className="App">
       <h1 style={{ color: "blue" }}>Welcome {username}</h1>
       <button onClick={likeCounter}>Like</button>
+      <h2>Like Counter: {counter}</h2>
     </div>
   );
 }
