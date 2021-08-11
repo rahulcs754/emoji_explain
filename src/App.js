@@ -57,10 +57,14 @@ export default function App() {
 
   const inputText = (e) => {
     var userInput = e.target.value;
-    if (userInput in emojiDictionary) {
-      setexplain(emojiDictionary[userInput]);
+    if (userInput != null) {
+      if (userInput in emojiDictionary) {
+        setexplain(emojiDictionary[userInput]);
+      } else {
+        setexplain("No Emoji Data Found");
+      }
     } else {
-      setexplain("No Emoji Data Found");
+      setexplain("Please enter some value");
     }
   };
 
