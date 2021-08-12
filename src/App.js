@@ -72,14 +72,15 @@ export default function App() {
   var list = Object.keys(emojiDictionary);
 
   function emojiclickHandler(element) {
-    console.log(element);
+    setexplain(emojiDictionary[element]);
   }
 
   return (
     <div className="App">
-      <h1 style={{ color: "blue" }}>Welcome </h1>
+      <h1 style={{ color: "blue" }}>Welcome emoji pedia </h1>
+      <p>Below you enter any emoji or select any icon of emoji</p>
       <input onChange={inputText} />
-      <h3>Explain : {explain}</h3>
+      <h3>{explain}</h3>
       <hr />
       <ul>
         {list.map(function (element) {
