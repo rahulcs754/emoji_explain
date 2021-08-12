@@ -67,16 +67,25 @@ export default function App() {
       setexplain("Please enter some value");
     }
   };
+
+  //access all keys of object
   var list = Object.keys(emojiDictionary);
+
+  function emojiclickHandler(element) {
+    console.log(element);
+  }
+
   return (
     <div className="App">
       <h1 style={{ color: "blue" }}>Welcome </h1>
       <input onChange={inputText} />
-      <h3>Define: {explain}</h3>
+      <h3>Explain : {explain}</h3>
       <hr />
       <ul>
         {list.map(function (element) {
-          return <li> {element} </li>;
+          return (
+            <li onClick={() => emojiclickHandler(element)}> {element} </li>
+          );
         })}
       </ul>
     </div>
