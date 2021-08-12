@@ -75,8 +75,8 @@ export default function App() {
       <h3>Define: {explain}</h3>
       <hr />
       <ul>
-        {list.map(function (element, index, array) {
-          return <li> {array[index]} </li>;
+        {list.map(function (element) {
+          return <li> {element} </li>;
         })}
       </ul>
     </div>
